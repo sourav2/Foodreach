@@ -1,0 +1,39 @@
+@import "tailwindcss";
+@theme {
+ /* Green Scale (Leaf Green - #4CAF50) */
+  --color-green-light: #e8f5e9;
+  --color-green-normal: #4caf50;
+  --color-green-hover: #43a047;
+  --color-green-active: #388e3c;
+  --color-green-dark: #2e7d32;
+  --color-green-darker: #1b5e20;
+
+  /* Orange Scale (Secondary Action - #FF9800) */
+  --color-orange-light: #fff3e0;
+  --color-orange-normal: #ff9800;
+  --color-orange-hover: #fb8c00;
+  --color-orange-active: #f57c00;
+  --color-orange-dark: #ef6c00;
+  --color-orange-darker: #e65100;
+
+  /* Text & Backgrounds */
+  --color-bg-offwhite: #fafafa;
+  --color-text-charcoal: #212121;
+  --color-text-mild-gray: #757575;
+  --color-calming-blue: #2196f3;
+
+  /* Set Open Sans as the default sans font */
+  --font-logo: "Onest", sans-serif;
+  --font-sans: "Open Sans", ui-sans-serif, system-ui;
+
+  /* Mapping your Figma Text Styles */
+  --text-display: 68px;       /* Display Medium / Bold */
+  --text-h2: 42px;            /* H2 Medium / Semibold / Bold */
+  --text-h3: 26px;            /* H3 Medium / Semibold / Bold */
+  --text-paragraph: 16px;     /* Paragraph Styles */
+  --text-caption: 10px;       /* Caption Styles */
+  --text-small-caption: 6px;  /* Small Caption Styles */
+
+  /* Leading (Line Heights) based on your Figma "Auto" or "57.2" */
+  --leading-h2: 1.36;         /* 57.2 / 42 = ~1.36 */
+}
