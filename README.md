@@ -1,21 +1,34 @@
+# 🍲 FoodReach
+**Connecting Surplus Food to Communities in Need.**
 
-# Foodreach
-Food delivery platform for the needy people
-=======
-# React + Vite
+FoodReach is a React-based web application designed to bridge the gap between community kitchens and local residents. It provides a real-time platform to track food availability and schedule pickups, aimed at reducing food waste in areas like North Dumdum, Kolkata.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🚀 Live Demo
+**[View Live Site on Vercel](https://foodreach-cyjk6.vercel.app/)**
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🎨 Design Vision
+As a UI/UX Designer, my goal was to create a "Trust-First" interface. 
+- **Brand Colors:** Leaf Green (#4CAF50) for growth/health and Secondary Orange (#FF9800) for energy/action.
+- **Typography:** Using *Open Sans* for high readability and *Onest* for a modern logo feel.
+- **Key Features:** Real-time Map integration, Interactive Booking cards, and a streamlined "Thank You" flow.
 
-## React Compiler
+## 🛠️ Tech Stack
+- **Frontend:** React.js (Vite)
+- **Styling:** Tailwind CSS v4 (Custom @theme variables)
+- **Routing:** React Router v7
+- **Deployment:** Vercel
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 📸 Screenshots
+*(Tip: Once you take good screenshots, you can add them here!)*
+- **Dashboard:** Search and explore local food requests.
+- **Booking Flow:** Simplified 3-step process to reserve meals.
 
-## Expanding the ESLint configuration
+## ⚙️ Installation & Setup
+1. Clone the repo: `git clone https://github.com/sourav2/Foodreach.git`
+2. Install dependencies: `npm install`
+3. Run locally: `npm run dev`
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
->>>>>>> 1df56f9 (Initial commit: FoodReach App with Product and Booking flows)
+---
+**Designed & Developed by Sourav Haldar** *UI/UX Designer | Frontend Developer | Kolkata*
