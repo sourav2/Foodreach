@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link , useLocation} from 'react-router-dom';
-import Rice from '../assets/rice.jpg';
+import Rice from '../assets/Rice.jpg';
 import Notifications from '../components/Notifications';
 import Sidebar from '../components/Sidebar';
 
