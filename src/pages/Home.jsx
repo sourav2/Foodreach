@@ -134,7 +134,7 @@ const Home = () => {
           <SidebarCards />
           
           <div className='flex flex-col items-center gap-2'>
-            <h3 className="font-bold text-text-charcoal text-sm uppercase tracking-widest">Most booked items</h3>
+            <h3 className="font-semibold text-text-charcoal text-md tracking-normal">Most booked items</h3>
             <div className="w-10 h-1 bg-green-normal rounded-full"></div>
           </div>
           

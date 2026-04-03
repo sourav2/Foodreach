@@ -4,7 +4,7 @@
 FoodReach is a React-based web application designed to bridge the gap between community kitchens and local residents. It provides a real-time platform to track food availability and schedule pickups, aimed at reducing food waste in areas like North Dumdum, Kolkata.
 
 ## 🚀 Live Demo
-**[View Live Site on Vercel](https://foodreach-cyjk6.vercel.app/)**
+**[View Live Site on Vercel](https://foodreach-cyj6.vercel.app/)**
 
 ---
 

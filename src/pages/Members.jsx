@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import SearchBar from '../components/SearchBar';
+import Notifications from '../components/Notifications';
+import Sidebar from '../components/Sidebar';
 
 const MembersList = () => {
   const sections = [
@@ -39,29 +41,77 @@ const MembersList = () => {
     }
   ];
 
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [showNotifications, setShowNotifications] = useState(false);
+    const dropdownRef = useRef(null);
+  
+    // Close dropdown if user clicks anywhere outside of it
+    useEffect(() => {
+      const handleClickOutside = (event) => {
+        if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+          setShowNotifications(false);
+        }
+      };
+      document.addEventListener("mousedown", handleClickOutside);
+      return () => document.removeEventListener("mousedown", handleClickOutside);
+    }, []);
   return (
     <div className="min-h-screen bg-bg-offwhite pb-12">
 {/* --- NAVBAR --- */}
       <nav className="bg-white px-6 md:px-12 py-4 flex items-center justify-between sticky top-0 z-50 shadow-sm">
         <div className="font-logo text-3xl font-extrabold tracking-tighter">
-          <span className="text-orange-normal">Food</span>
-          <span className="text-green-normal">Reach</span>
+          <Link to="/home" className="flex items-center gap-1">
+            <span className="text-orange-normal">Food</span>
+            <span className="text-green-normal">Reach</span>
+          </Link>
         </div>
         
         <div className="hidden md:flex items-center gap-8 font-semibold text-sm">
-          <a href="#" className="text-green-normal border-b-2 border-green-normal">Home</a>
-          <a href="#" className="hover:text-green-normal">Track Deliveries</a>
-          <a href="./members" className="hover:text-green-normal">Contact Us</a>
+          <Link to="/home" className="text-green-normal border-b-2 border-green-normal pb-1">Home</Link>
+          <Link to="/my-bookings" className="hover:text-green-normal transition-colors">Track Deliveries</Link>
+          <Link to="" className="hover:text-green-normal transition-colors">Contact Us</Link>
         </div>
 
         <div className="flex items-center gap-5 text-xl text-text-mild-gray">
-          <i className="fa-regular fa-bell cursor-pointer hover:text-green-normal"></i>
-          <i className="fa-regular fa-comment-dots cursor-pointer hover:text-green-normal"></i>
-          <Link to="/profile">
-          <i className="fa-regular fa-circle-user cursor-pointer hover:text-green-normal"></i>
-          </Link>
-          <i className="fa-solid fa-bars md:hidden text-green-normal"></i>
+         <button 
+          onClick={() => setShowNotifications(!showNotifications)}
+          className="relative group outline-none"
+        >
+          <i className={`fa-regular fa-bell cursor-pointer transition-colors ${showNotifications ? 'text-green-normal' : 'hover:text-green-normal'}`}></i>
+          
+          {/* Badge */}
+          <span className="absolute -top-1 -right-1 flex h-3 w-3">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-normal opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-3 w-3 bg-green-normal border-2 border-white"></span>
+          </span>
+        </button>
+        {/* --- THE SLIDE DOWN OVERLAY --- */}
+        <div ref={dropdownRef} className={`absolute top-12 right-0 w-[320px] md:w-[400px] transition-all duration-300 origin-top transform ${
+          showNotifications 
+            ? "opacity-100 scale-y-100 visible" 
+            : "opacity-0 scale-y-0 invisible"
+        }`}>
+          <div className="bg-white rounded-[24px] shadow-2xl border border-gray-100 overflow-hidden max-h-[500px] flex flex-col">
+             {/* We call your existing component here */}
+             <Notifications isDropdown={true} /> 
+          </div>
         </div>
+          
+          <i className="fa-regular fa-comment-dots cursor-pointer hover:text-green-normal transition-colors"></i>
+          
+          <Link to="/profile">
+            <i className="fa-regular fa-circle-user cursor-pointer hover:text-green-normal transition-colors"></i>
+          </Link>
+          
+          {/* Burger Icon */}
+          <i 
+            className="fa-solid fa-bars cursor-pointer text-green-normal md:hidden" 
+            onClick={() => setIsMenuOpen(true)}
+          ></i>
+        </div>
+
+        {/* Sidebar Component */}
+        <Sidebar isOpen={isMenuOpen} setIsOpen={setIsMenuOpen} />
       </nav>
 
       {/* --- SEARCH SECTION --- */}

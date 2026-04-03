@@ -61,7 +61,10 @@ const PreviousDeliveries = () => {
 
   return (
     <div className="w-full space-y-4 mt-8">
-      <h3 className="text-center font-bold text-text-charcoal text-md ">Previous Deliveries</h3>
+      <div className='flex flex-col items-center gap-2'>
+            <h3 className="font-semibold text-text-charcoal text-md tracking-normal">Previous Deliveries</h3>
+            <div className="w-10 h-1 bg-green-normal rounded-full"></div>
+          </div>
 
       {/* MAIN SLIDER CARD */}
       <div 
@@ -113,9 +116,9 @@ const PreviousDeliveries = () => {
                   <i className="fa-regular fa-heart cursor-pointer"></i>
                   <i className="fa-regular fa-comment cursor-pointer"></i>
                 </div>
-                <button className="bg-green-normal text-white rounded-2xl font-regular shadow-md hover:bg-green-hover transition-all active:scale-95 text-md px-5 py-2">
-                  Track Delivery
-                </button>
+                <Link to="/my-bookings" className="bg-green-normal text-white rounded-2xl font-regular shadow-md hover:bg-green-hover transition-all active:scale-95 text-md px-5 py-2">
+                  Track Deliveries
+                </Link>
               </div>
             </div>
           </div>

@@ -26,8 +26,10 @@ const AllItems = () => {
 
   return (
     <div className="w-full space-y-6">
-      <h3 className="text-center font-bold text-text-charcoal text-sm">Available items</h3>
-      
+      <div className='flex flex-col items-center gap-2'>
+            <h3 className="font-semibold text-text-charcoal text-md tracking-normal">Available Items</h3>
+            <div className="w-10 h-1 bg-green-normal rounded-full"></div>
+          </div>
       {/* 2-COLUMN GRID - Keyed to currentIndex to slide the whole row */}
       <div 
         key={currentIndex} 
