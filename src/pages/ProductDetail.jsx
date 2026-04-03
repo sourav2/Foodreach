@@ -202,7 +202,7 @@ const ProductPage = () => {
               {/* PRIMARY BUTTON: RESERVE PICKUP */}
   <button 
     onClick={() => navigate('/thankyou')}
-    className="flex-[1.2] rounded-xl bg-green-normal hover:bg-green-hover text-white font-medium py-2 px-6 rounded-full shadow-md transition-all active:scale-95 text-md flex items-center justify-center gap-2 whitespace-nowrap"
+    className="flex-[1.2] rounded-xl bg-green-normal hover:bg-green-hover text-white font-regular py-2 px-6 rounded-full shadow-md transition-all active:scale-95 text-md flex items-center justify-center gap-2 whitespace-nowrap"
   >
     Reserve pickup 
     <i className="fa-solid fa-angles-right text-xs opacity-90"></i>
@@ -211,7 +211,7 @@ const ProductPage = () => {
   {/* SECONDARY BUTTON: PICK MYSELF */}
   <button 
     onClick={() => navigate('/thankyou')}
-    className="flex-1 rounded-xl border border-green-normal text-green-normal font-medium py-2 px-6 rounded-full hover:bg-green-50 transition-all active:scale-95 text-md whitespace-nowrap"
+    className="flex-1 rounded-xl border border-green-normal text-green-normal font-regular py-2 px-6 rounded-full hover:bg-green-50 transition-all active:scale-95 text-md whitespace-nowrap"
   >
     Pick myself
   </button>
