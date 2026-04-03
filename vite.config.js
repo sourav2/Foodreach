@@ -1,11 +1,7 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import tailwindcss from '@tailwindcss/vite'
 
-// This tells Vite to use Tailwind v4
+// Standard config for local development
 export default defineConfig({
-  plugins: [
-    react(),
-    tailwindcss(),
-  ],
+  plugins: [react()],
 })

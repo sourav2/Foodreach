@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, BrowserRouter } from 'react-router-dom';
 import React, { useState } from 'react';
 import Login from './pages/login';
 import DetailsFill from './pages/DetailsFill';
@@ -13,11 +13,10 @@ import ThankyouPage from './pages/ThankyouPage';
 
 function App() {
   return (
-    <Router>
+    
       <Routes>
         {/* The first page users see */}
         <Route path="/" element={<Login />} />
-        
         {/* The page users go to when they click Signup */}
         <Route path="/signup" element={<DetailsFill />} />
         <Route path="/home" element={<Home />} />
@@ -30,7 +29,7 @@ function App() {
         
 
       </Routes>
-    </Router>
+    
   );
 }
 

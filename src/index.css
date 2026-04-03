@@ -1,5 +1,7 @@
 @import "tailwindcss";
-@theme {
+
+
+ @theme {
  /* Green Scale (Leaf Green - #4CAF50) */
   --color-green-light: #e8f5e9;
   --color-green-normal: #4caf50;
